@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace TravelWeather.Controllers
 {
@@ -7,19 +6,28 @@ namespace TravelWeather.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private static readonly string[] Summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly JsonDocument weatherData; 
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            weatherData = JsonDocument.Parse(System.IO.File.ReadAllText("weather.json"));
         }
 
-        [HttpGet]
-        public IEnumerable<string> GetCountries()
+        [HttpGet(Name = "GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> Get()
         {
-            return weatherData.RootElement.EnumerateObject().Select(country => country.Name);
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
         }
     }
 }
