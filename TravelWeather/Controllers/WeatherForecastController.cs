@@ -1,33 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
-namespace TravelWeather.Controllers
+namespace TravelWeather.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class WeatherForecastController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly JsonDocument weatherData;
+
+    public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        _logger = logger;
+        weatherData = JsonDocument.Parse(System.IO.File.ReadAllText("weather.json"));
+    }
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
-        }
-
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
+    [HttpGet("countries")]
+    public IEnumerable<string> GetCountries()
+    {
+        return weatherData.RootElement.EnumerateObject().Select(country => country.Name);
     }
 }
+
