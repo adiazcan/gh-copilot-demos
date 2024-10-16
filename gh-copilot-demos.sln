@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Copilot.Debugging", "Copilo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RubberDucking", "RubberDucking\RubberDucking.csproj", "{E6BD69CB-F186-4892-BBAF-88D0FD0C3E24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadlockDemo", "DeadlockDemo\DeadlockDemo.csproj", "{5DBC569F-5E22-42F6-B493-57F20F369D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{E6BD69CB-F186-4892-BBAF-88D0FD0C3E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6BD69CB-F186-4892-BBAF-88D0FD0C3E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6BD69CB-F186-4892-BBAF-88D0FD0C3E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBC569F-5E22-42F6-B493-57F20F369D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBC569F-5E22-42F6-B493-57F20F369D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBC569F-5E22-42F6-B493-57F20F369D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBC569F-5E22-42F6-B493-57F20F369D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +82,6 @@ Global
 		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79} = {A2EC0FCD-5915-438E-ABC1-15348150FB78}
 		{17F40F3A-2A06-4219-A343-E8CA44444A19} = {0FDC6CD3-E145-4B02-BF9A-904EE84AD7E4}
 		{E6BD69CB-F186-4892-BBAF-88D0FD0C3E24} = {0FDC6CD3-E145-4B02-BF9A-904EE84AD7E4}
+		{5DBC569F-5E22-42F6-B493-57F20F369D6C} = {0FDC6CD3-E145-4B02-BF9A-904EE84AD7E4}
 	EndGlobalSection
 EndGlobal
