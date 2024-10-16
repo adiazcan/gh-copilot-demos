@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prompt", "Prompt", "{A2EC0F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWeather", "TravelWeather\TravelWeather.csproj", "{39A16BEB-A2FA-4FB6-8E33-B4C233EC7B52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWeather.Tests", "TravelWeather.Tests\TravelWeather.Tests.csproj", "{9852CC8B-6FC7-42D8-96EF-65A74F66BE79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{39A16BEB-A2FA-4FB6-8E33-B4C233EC7B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A16BEB-A2FA-4FB6-8E33-B4C233EC7B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A16BEB-A2FA-4FB6-8E33-B4C233EC7B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +54,6 @@ Global
 		{5A49BCA9-5663-47B9-A94E-C3F098CBE86C} = {867C3AA2-2A10-4AA7-8586-5BA09B6EC9D7}
 		{B0E1AD2A-87F5-4F67-8152-79AA8EBAD07D} = {E5EC7681-C357-4783-A697-70198DCE0647}
 		{39A16BEB-A2FA-4FB6-8E33-B4C233EC7B52} = {A2EC0FCD-5915-438E-ABC1-15348150FB78}
+		{9852CC8B-6FC7-42D8-96EF-65A74F66BE79} = {A2EC0FCD-5915-438E-ABC1-15348150FB78}
 	EndGlobalSection
 EndGlobal
